@@ -76,10 +76,10 @@
 
 
 
-    <main class=trends>
-        <h2 class="section-name ">Сейчас в тренде</h2>
-        <section class="trend">
-            <div class="trend-box">
+        <section class="trends-box">
+            <h2 class="section-name ">Сейчас в тренде</h2>
+            <div class="trend">
+            <article class="trend-box">
                 <div class="trend-content">
                     <ul class="categories">
                         <li><a class="category" href="#">Lifestyle</a></li>
@@ -87,16 +87,16 @@
                     </ul>
                     <h3 class="section-text">Сейчас в тренде: сад<br> на подоконнике</h3>
                 </div>
-            </div>
-            <div class="trend-box  trend-box-food">
+            </article>
+            <article class="trend-box  trend-box-food">
                 <div class="trend-content trend-content-food">
                     <ul class="categories">
                         <li><a class="category" href="#">Food</a></li>
                     </ul>
                     <h3 class="section-text">сыры на красивых картинках из интернета: какие они на вкус?</h3>
                 </div>
-            </div>
-            <div class="trend-box trend-box-travel">
+            </article>
+            <article class="trend-box trend-box-travel">
                 <div class="trend-content trend-content-travel">
                     <ul class="categories">
                         <li><a class="category" href="#">Lifestyle</a></li>
@@ -104,8 +104,8 @@
                     </ul>
                     <h3 class="section-text">СОБИРАЕМСЯ В ПЕРВЫЙ ПОХОД В ГОРЫ</h3>
                 </div>
-            </div>
-            <div class="trend-box trend-box-health">
+            </article>
+            <article class="trend-box trend-box-health">
                 <div class="trend-content trend-content-health">
                     <ul class="categories">
                         <li><a class="category" href="#">Food</a></li>
@@ -113,9 +113,9 @@
                     </ul>
                     <h3 class="section-text">Сейчас в тренде: сКОЛЬКО ВИТАМИНА c В ЛИМОНАХ?</h3>
                 </div>
-            </div>
+            </article>
+           </div>
         </section>
-    </main>
 
 
     <div class="article-flex">
@@ -205,6 +205,7 @@
                         <p class="text">Подушки для дивана целесообразнее заказать в съемных чехлах на молнии, если потребуется чистка подушек, проще снять чехлы, чем везти подушку в химчистку.</p>
                 </div>
             </article>
+
         </section>
         <aside class="aside">
             <section class="new-posts">
@@ -302,16 +303,17 @@
     <section class="goods">
         <h2 class="section-name">Наши изделия</h2>
         <div class="good">
-            <div class="good-content">
+            <article class="good-content">
                 <div class="good-image">
                     <picture>
                         <source
+
                             media="(max-width: 640px)"
                             srcset="img/shop-item-mobile1.jpg"> 
                         <source
-                            media="(max-width: 1199px)"
+                            media="(min-width: 641px) and (max-width: 1199px)"
                             srcset="img/shop-item-tablet1.jpg">
-                        <img src="img/shop-item-desk1.jpg" alt="Подушка">
+                        <img src="img/shop-item-desk1.jpg" class="img-mobile" alt="Подушка">
                     </picture>
                 </div>
                 <div class="border">
@@ -325,17 +327,18 @@
                         <button class="button-shop">В магазин</button>
                     </div>
                 </div>
-            </div>
-            <div class="good-content">
+            </article>
+            <article class="good-content">
                 <div class="good-image">
                     <picture>
                         <source
+                            
                             media="(max-width: 640px)"
-                            srcset="img/shop-item-mobile2.jpg"> 
+                            srcset="img/shop-item-mobile2.jpg">
                         <source
-                            media="(max-width: 1199px)"
+                            media="(min-width: 641px) and (max-width: 1199px)"
                             srcset="img/shop-item-tablet2.jpg">
-                        <img src="img/shop-item-desk2.jpg" alt="Заяц">
+                        <img src="img/shop-item-desk2.jpg" class="img-mobile" alt="Заяц">
                     </picture>
                 </div>
                 <div class="border border_toy">
@@ -348,17 +351,18 @@
                         <button class="button-shop">В магазин</button>
                     </div>
                 </div>
-            </div> 
-            <div class="good-content">
+            </article> 
+            <article class="good-content">
                 <div class="good-image">
                     <picture>
                         <source
+                            
                             media="(max-width: 640px)"
                             srcset="img/shop-item-mobile3.jpg"> 
                         <source
-                            media="(max-width: 1199px)"
+                            media="(min-width: 641px) and (max-width: 1199px)"
                             srcset="img/shop-item-tablet3.jpg">
-                        <img src="img/shop-item-desk3.jpg" alt="Рамка">
+                        <img src="img/shop-item-desk3.jpg" class="img-mobile" alt="Рамка">
                     </picture>
                 </div>
                 <div class="border border_frame">
@@ -372,7 +376,7 @@
                         <button class="button-shop">В магазин</button>
                     </div>
                 </div>
-            </div>         
+            </article>         
         </div>
     </section>
     <footer class="footer">
