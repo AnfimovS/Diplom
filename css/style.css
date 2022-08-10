@@ -108,6 +108,11 @@ p {
 .popup-section_hidden {
     visibility: hidden;
 }
+.popup-form {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
 .popup-section_hidden {
     width: 390px;
     height: 586px;
@@ -708,14 +713,13 @@ p {
     border-bottom: 1px solid #a3a4a1;
     box-sizing: border-box;
     position: relative;
-
     }
     .trend {
         flex-wrap: wrap;
     }
     .trend-content {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .trend-box-travel {
         margin-top: 2px
@@ -744,11 +748,12 @@ p {
         width: 91%;
     }
     .article-flex {
-        width: 91%;
+        width: 100%;
         margin-top: 50px;
     }
     .article {
         width: 56%;
+        padding-left: 35px;
     }
     .title-text {
         font-size: 40px;
@@ -762,17 +767,28 @@ p {
     }
     .aside {
         width: 267px;
+        padding-right: 35px
     }
     .goods {
         max-width: 767px;
-        margin: auto;
-        padding: 0 35px;
+        width: 100%
     }
     .good-content {
-        width: 47%
+        width: 45%;
+    }
+    .good-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .good {
         flex-wrap: wrap;
+        padding: 0 35px;
+        gap: 10%;
+    }
+    .border {
+        margin-left: -20px;
+        margin-right: -20px;
     }
     .section-name-article {
         font-size: 17px;
@@ -879,8 +895,9 @@ p {
     }
     .article-flex {
         display: block;
-        width: 91%;
+        width: 100%;
         margin-top: 44px;
+        padding: 0 15px;
     }
     .article-contents {
         display: block;
@@ -910,14 +927,17 @@ p {
         width: 100%;
     }
     .good {
-        display: block;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 15px;
     }
     .good-content {
         margin: 0 15px;
         width: 95%;
     }
     .goods {
-        width: 95%;
+        width: 100%;
     }
     .border {
         padding: 50px 10% 70px 10%;
@@ -932,14 +952,14 @@ p {
         width: 80%
     }
     .popup-section {
-        width: 330px;
+        width: 300px;
         height: 545px;
     }
     .popup {
-        width: 280px;
+        width: 260px;
     }
     .close-popup {
-        margin-left: 305px;
+        margin-left: 275px;
     }
     .section-name_popup {
         margin-top: 24px;
@@ -952,252 +972,84 @@ p {
     }
 }
 @media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
-        .trend-box {
+ .trend-box {
+    width: 24.8%;
+    border-top: 1px solid #a3a4a1;
+    border-bottom: 1px solid #a3a4a1;
+    background-image: url(../img/trend1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    position: relative;
+    padding: 110px 0 10px;
+    display: flex; 
+    flex-direction: column-reverse;
+}
+.trend-box::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.category {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #b59f5b;
+    font-size: 14px;
+    margin-right: 20px;
+}
+.category:hover {
+    border-bottom: 1px solid #b59f5b;
+}
+.categories {
+    display: flex;
+}
+.section-text {
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 12px;
+}
+.trend-content {
+    z-index: 1;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 3px solid #b59f5b;
+    padding: 30px;
+    }
+    .trend {
+        display: flex;
+        justify-content: space-between;
+    }
+    .trend-box-food {
+        background-image: url(../img/trend2.jpg);
+    }
+    .trend-box-travel {
+        background-image: url(../img/trend3.jpg);
+    }
+    .trend-box-health {
+        background-image: url(../img/trend4.jpg);
+    }
+}
+@media (max-width: 640px) and (orientation: landscape) {
+     .trend-box {
     width: 49.8%;
     border-top: 1px solid #a3a4a1;
     border-bottom: 1px solid #a3a4a1;
     box-sizing: border-box;
     position: relative;
-
     }
     .trend {
         flex-wrap: wrap;
+        display: flex;
     }
     .trend-content {
         display: flex;
-        flex-direction: column-reverse;
-    }
-    .trend-box-travel {
-        margin-top: 2px
-    }
-    .trend-box-health {
-        margin-top: 2px
-    }
-    .section-text {
-        font-size: 17px;
-    }
-    .article-contents {
-        display: block;
-
-    }
-    .article-content {
-        margin: 0;
-        margin-top: 10px;
-    }
-    .text {
-        margin-top: 36px;
-    }
-    .section-name-article {
-        margin-bottom: 36px;
-    }
-    .header-wrapper {
-        width: 91%;
-    }
-    .article-flex {
-        width: 91%;
-        margin-top: 50px;
-    }
-    .article {
-        width: 56%;
-    }
-    .title-text {
-        font-size: 40px;
-        width: 90%;
-    }
-    .nav {
-        display: none;
-    }
-    .container {
-        justify-content: space-between;
-    }
-    .aside {
-        width: 267px;
-    }
-    .goods {
-        max-width: 767px;
-        margin: auto;
-        padding: 0 35px;
-    }
-    .good-content {
-        width: 47%
-    }
-    .good {
-        flex-wrap: wrap;
-    }
-    .section-name-article {
-        font-size: 17px;
-    }
-    .img-article {
-        width: 100%;
-    }
-    .article-contents:not(:last-child) {
-        border-bottom: 3px solid #eeeeee;
-        padding-bottom: 24px;
-        margin-bottom: 40px;
-    }
-    .article-flex{
-        justify-content: center;
-    }
-    .article {
-        margin-right: 35px;
-    }
-    .article-contents:last-child {
-        margin-bottom: 0
-     }
-    .section-name {
-        margin-top: 50px;
-    }
-    .burger {
-        display: block;
-        border: none;
-        background: transparent;
-    }
-    .burger-img {
-        fill: white;
-        width: 30px;
-        height: 30px;
-        padding-top: 10px;
-    }
-    .social {
-        width: 91%
-    }
-}
-@media (max-width: 640px) and (orientation: portrait) {
-        .header-wrapper {
-        display: block;
-        width: 91%;
-    }
-    .nav {
-        display: none
-    }
-    .burger {
-        display: block;
-        border: none;
-        background: transparent;
-        float: right;
-        width: 40px;
-        height: 40px;
-        position: relative;
-        bottom: 270px;
-    }
-    .burger-img {
-        fill: white;
-        width: 30px;
-        height: 30px;
-        padding-top: 10px;
-    }
-    .header {
-        height: 640px;
-        background-image: url(../img/banner-mobile.jpg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        position: relative;
-    }
-    .header::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.6);
-    }
-    .container {
-        display: block;
-    }
-    .logo {
-        width: 82%;
-        width: 82%;
-        margin: 0 auto;
-        display: block;
-        padding-top: 200px;
-    }
-    .title-text {
-        font-size: 26px;
-        width: 89%;
-        line-height: 1.5;
-        margin-top: 44px;
-    }
-    .trend-box {
-        width: 100%;
-        margin-bottom: 1px;
-    }
-    .trend {
-        display: block;
-    }
-    .article-flex {
-        display: block;
-        width: 91%;
-        margin-top: 44px;
-    }
-    .article-contents {
-        display: block;
-    }
-    .article {
-        width: 100%;
-        box-sizing: border-box;
-    }
-    .img-article {
-        width: 100%;
-    }
-    .article-content {
-        margin-left: 0;
-    }
-    .text {
-        font-size: 14px;
-        margin-top: 24px;
-    }
-    .section-name-article {
-        margin-bottom: 24px; 
-    }
-    .categories {
-        margin-top: 16px;
-    }
-    .aside {
-        float: none;
-        width: 100%;
-    }
-    .good {
-        display: block;
-    }
-    .good-content {
-        margin: 0 15px;
-        width: 95%;
-    }
-    .goods {
-        width: 95%;
-    }
-    .border {
-        padding: 50px 10% 70px 10%;
-    }
-    .section-name {
-        margin-top: 44px;
-    }
-    .social {
-        width: 91%;
-    }
-    .good-img {
-        width: 80%
-    }
-    .popup-section {
-        width: 330px;
-        height: 545px;
-    }
-    .popup {
-        width: 280px;
-    }
-    .close-popup {
-        margin-left: 305px;
-    }
-    .section-name_popup {
-        margin-top: 24px;
-    }
-    .border {
-        width: 100%;
-    }
-    .img-mobile {
-        width: 90%;
+        flex-direction: column;
     }
 }
